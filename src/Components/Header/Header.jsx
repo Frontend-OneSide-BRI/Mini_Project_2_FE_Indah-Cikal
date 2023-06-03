@@ -20,7 +20,9 @@ export default function Header() {
     <header className="w-full fixed top-10 left-0 px-10 z-[100]">
       <div className="sm:flex items-center justify-between py-4 sm:px-10 box">
         <h1 className="font-bold text-2xl cursor-pointer flex items-center text-dark-font hover:text-light-font duration-500 px-7 sm:px-0">
-          <Link to="/">Cikal's Galery</Link>
+          <Link to="/" onClick={() => setOpen(false)}>
+            Cikal's Galery
+          </Link>
         </h1>
 
         <div
@@ -40,6 +42,7 @@ export default function Header() {
               <Link
                 to={link.link}
                 className="text-dark-font hover:text-light-font duration-500"
+                onClick={() => setOpen(false)}
               >
                 {link.name}
               </Link>

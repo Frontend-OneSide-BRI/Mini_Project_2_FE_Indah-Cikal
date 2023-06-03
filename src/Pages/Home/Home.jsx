@@ -4,6 +4,8 @@ import "./Home.css";
 import Galery from "../../Components/Galery/Galery";
 
 const Home = () => {
+  const bg =
+    "https://images.unsplash.com/photo-1461696114087-397271a7aedc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80";
   return (
     <>
       <Carousel />
@@ -12,11 +14,10 @@ const Home = () => {
           <div
             className="parallax rounded-custom flex flex-col justify-center text-white-bone text-center px-5 py-10"
             style={{
-              backgroundImage:
-                'url("https://plus.unsplash.com/premium_photo-1670422126816-fd0594135bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=917&q=80',
+              backgroundImage: `url(${bg})`,
             }}
           >
-            <h2 className="font-bold text-xl tracking-wider">
+            <h2 className="font-bold text-3xl tracking-wider">
               About This Project
             </h2>
             <p>
@@ -26,7 +27,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center text-center px-5">
-            <h2 className="font-bold text-xl tracking-wider">Who are We?</h2>
+            <h2 className="font-bold text-3xl tracking-wider">Who are We?</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium iure quasi sit qui eius vel commodi odit architecto
@@ -36,9 +37,11 @@ const Home = () => {
         </div>
       </section>
       <section className="best-artwork bg-white-bone py-10">
-        <div className="text-center pb-7">
+        <div className="text-center pb-7 text-dark-font">
           <h2 className="text-3xl font-bold tracking-wider">Our Best Work</h2>
-          <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</p>
+          <p className="px-5">
+            Lorem ipsum dolor sit amet. Lorem, ipsum dolor.
+          </p>
         </div>
         <Galery category="Best Artwork" />
       </section>

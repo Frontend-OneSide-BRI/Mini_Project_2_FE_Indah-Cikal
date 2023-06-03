@@ -1,55 +1,34 @@
 import React, { useState } from "react";
-import {
-  BsStarFill,
-  BsAwardFill,
-  BsFillBookmarkStarFill,
-} from "react-icons/bs";
+
 import Galery from "../Galery/Galery";
 
-const Tabs = ({ color }) => {
+const Tabs = () => {
   const [openTab, setOpenTab] = useState("All Posts");
-  const tabData = [
-    {
-      category: "All Posts",
-      icons: <BsFillBookmarkStarFill />,
-    },
-    {
-      category: "Most Popular",
-      icons: <BsAwardFill />,
-    },
-    {
-      category: "Personal Favorite",
-      icons: <BsStarFill />,
-    },
-  ];
+  const tabData = ["All Posts","Most Popular", "Personal Favorite"];
 
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+            className="mb-0 list-none py-4 flex align-center justify-center"
             role="tablist"
           >
-            {tabData.map((item) => (
-              <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                  className={
-                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                    (openTab === item.category
-                      ? `text-white-bone bg-${color}`
-                      : ` bg-white`)
-                  }
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(item.category);
-                  }}
-                  data-toggle="tab"
-                  href="#link1"
-                  role="tablist"
-                >
-                  {item.icons} {item.category}
-                </a>
+            {tabData.map((item, i) => (
+              <li
+                key={i}
+                className={
+                  "px-2 md:px-5 font-bold flex items-center block justify-center hover:cursor-pointer transition-all duration-300 hover:underline underline-offset-4 decoration-2" +
+                  (openTab === item ? ` underline text-dark-font` : ` text-light-font `)
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(item);
+                }}
+                data-toggle="tab"
+                role="tablist"
+              >
+                {item}
               </li>
             ))}
           </ul>
