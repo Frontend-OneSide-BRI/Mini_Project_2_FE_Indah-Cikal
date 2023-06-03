@@ -34,7 +34,7 @@ export default function Carousel() {
         className="mySwiper "
       >
         {carouselImage.map((item) => (
-          <SwiperSlide>
+          <SwiperSlide key={item.id}>
             <div
               className="px-20 sm:px-48 text-center img-caro pt-20 sm:pt-10 flex flex-col justify-center text-white-bone h-[400px] sm:h-[500px]"
               style={{

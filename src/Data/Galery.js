@@ -22,7 +22,7 @@ export const data = [
   {
     id: 4,
     src: "https://images.unsplash.com/photo-1605377740297-bf87e7d3fdda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
-    title: "Mountain View",
+    title: "Mountain",
     category: category[0],
   },
   {
@@ -119,7 +119,7 @@ export const data = [
   {
     id: 20,
     src: "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-    title: "Home",
+    title: "Wave",
     category: category[2],
   },
   {

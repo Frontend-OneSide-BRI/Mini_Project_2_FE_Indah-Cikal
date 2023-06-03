@@ -6,7 +6,7 @@ import { BsGithub, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import "./Header.css";
 
 export default function Header() {
-  const Links = [{ name: "Artworks", link: "/" }];
+  const Links = [{ name: "Artworks", link: "/artwork" }];
 
   const contacts = [
     { icon: <BsGithub />, link: "https://github.com/indahcikalao" },
@@ -20,7 +20,7 @@ export default function Header() {
     <header className="w-full fixed top-10 left-0 px-10 z-[100]">
       <div className="sm:flex items-center justify-between py-4 sm:px-10 box">
         <h1 className="font-bold text-2xl cursor-pointer flex items-center text-dark-font hover:text-light-font duration-500 px-7 sm:px-0">
-          Cikal's Galery
+          <Link to="/">Cikal's Galery</Link>
         </h1>
 
         <div
@@ -37,12 +37,12 @@ export default function Header() {
         >
           {Links.map((link) => (
             <li key={link.name} className="sm:mx-2 text-xl sm:my-0 my-3">
-              <a
-                href={link.link}
+              <Link
+                to={link.link}
                 className="text-dark-font hover:text-light-font duration-500"
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
           <div className="flex sm:hidden py-5">

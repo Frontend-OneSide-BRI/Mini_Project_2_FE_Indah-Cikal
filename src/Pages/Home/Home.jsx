@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Carousel />
       <section className="about py-10 bg-white-bone">
-        <div className="container mx-auto px-10 grid grid-cols-1 sm:grid-cols-2 gap-10 min-h-[300px]">
+        <div className="container mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-[300px]">
           <div
             className="parallax rounded-custom flex flex-col justify-center text-white-bone text-center px-5 py-10"
             style={{
@@ -35,8 +35,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <Galery />
+      <section className="best-artwork bg-white-bone py-10">
+        <div className="text-center pb-7">
+          <h2 className="text-3xl font-bold tracking-wider">Our Best Work</h2>
+          <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</p>
+        </div>
+        <Galery category="Best Artwork" />
+      </section>
     </>
   );
 };
