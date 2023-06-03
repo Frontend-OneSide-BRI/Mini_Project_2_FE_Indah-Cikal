@@ -17,7 +17,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full fixed top-10 left-0 px-10 z-[100]">
+    <header className="w-full fixed top-10 left-0 px-10 z-30">
       <div className="sm:flex items-center justify-between py-4 sm:px-10 box">
         <h1 className="font-bold text-2xl cursor-pointer flex items-center text-dark-font hover:text-light-font duration-500 px-7 sm:px-0">
           <Link to="/" onClick={() => setOpen(false)}>
