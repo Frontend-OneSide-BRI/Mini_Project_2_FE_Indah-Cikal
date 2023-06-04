@@ -21,20 +21,20 @@ const Artwork = () => {
               <h2 className="text-4xl sm:text-5xl font-bold tracking-wider pb-3 leading-10">
                 Are you looking for something?
               </h2>
-              <p className="pb-5 text-lg text-wide">No worries! We got you.</p>
+              <p className="pb-5 text-xl text-wide">No worries! We got you.</p>
             </label>
             <div className="flex">
               <input
-                className="bg-gray-200/75 text-dark-font placeholder:text-dark-font/50  rounded-full w-full h-[50px] py-2 px-4 leading-tight focus:outline-none focus:bg-white-bone focus:border-2 border-indigo-800/75"
+                className="bg-gray-200/75 text-dark-font placeholder:text-dark-font/50 placeholder:text-sm  rounded-full w-full h-[50px] py-2 px-4 leading-tight focus:outline-none focus:bg-white-bone focus:border-2 border-indigo-800/75"
                 id="inline-full-name"
                 type="text"
-                placeholder="Insert the keyword that you're looking for"
+                placeholder="Insert title, author, or category that you're looking for"
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
               />
               {searchValue && (
                 <IoCloseCircleSharp
-                  className="text-5xl ml-3 text-white-bone/75 hover:text-white-bone hover:cursor-pointer"
+                  className="text-5xl ml-2 text-white-bone/75 hover:text-white-bone hover:cursor-pointer"
                   onClick={() => setSearchValue("")}
                 />
               )}

@@ -33,12 +33,12 @@ export default function Header() {
         </div>
 
         <ul
-          className={`sm:flex sm:items-center sm:p-0 p-4 absolute sm:static sm:z-auto z-[99]  w-10/12 sm:w-auto bg-white sm:bg-transparent rounded-[13px] sm:rounded-none ${
+          className={`sm:flex sm:items-center sm:p-0 p-4 absolute sm:static sm:z-auto z-[99]  w-10/12 sm:w-auto bg-white-bone rounded-custom sm:rounded-none ${
             open ? "top-20 " : "hidden"
           }`}
         >
           {Links.map((link) => (
-            <li key={link.name} className="sm:mx-2 text-xl sm:my-0 my-3">
+            <li key={link.name} className="text-xl sm:my-0 my-3">
               <Link
                 to={link.link}
                 className="text-dark-font hover:text-light-font duration-500"

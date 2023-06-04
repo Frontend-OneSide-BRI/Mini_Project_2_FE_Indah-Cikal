@@ -9,15 +9,15 @@ const Home = () => {
   return (
     <>
       <Carousel />
-      <section className="about py-10 bg-white-bone">
-        <div className="container mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-[300px]">
+      <section className="about pt-10 pb-0 bg-white-bone">
+        <div className="lg:container mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 ">
           <div
-            className="parallax rounded-custom flex flex-col justify-center text-white-bone text-center px-5 py-10"
+            className="parallax rounded-custom my-auto text-white-bone text-center px-5 md:px-10 py-10 "
             style={{
               backgroundImage: `url(${bg})`,
             }}
           >
-            <h2 className="font-bold text-3xl tracking-wider">
+            <h2 className="font-bold text-3xl tracking-wider mb-2">
               About This Project
             </h2>
             <p>
@@ -26,12 +26,14 @@ const Home = () => {
               voluptatem autem reprehenderit? Distinctio, consequatur!
             </p>
           </div>
-          <div className="flex flex-col justify-center text-center px-5">
-            <h2 className="font-bold text-3xl tracking-wider">Who are We?</h2>
+          <div className="my-auto text-center px-5 md:px-10 ">
+            <h2 className="font-bold text-3xl tracking-wider mb-2">
+              Who are We?
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium iure quasi sit qui eius vel commodi odit architecto
-              illum quod?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Accusamus, hic eveniet itaque dolorum consectetur provident
+              voluptatem autem reprehenderit? Distinctio, consequatur!
             </p>
           </div>
         </div>

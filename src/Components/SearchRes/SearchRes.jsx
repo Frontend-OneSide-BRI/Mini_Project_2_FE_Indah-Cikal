@@ -8,9 +8,10 @@ const SearchRes = ({ value }) => {
     const searchRes = data.map((item) => {
       const title = item.title.toLocaleLowerCase();
       const category = item.category.toLocaleLowerCase();
+      const author = item.author.toLocaleLowerCase()
       const val = value.toLocaleLowerCase();
       return (
-        (title.includes(val) || category.includes(val)) && (
+        (title.includes(val) || category.includes(val) || author.includes(val)) && (
           <ImgCard item={item} key={item.id} />
         )
       );

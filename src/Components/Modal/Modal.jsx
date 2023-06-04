@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Modal({ showModal, setShowModal, item }) {
   return (
@@ -6,7 +7,7 @@ export default function Modal({ showModal, setShowModal, item }) {
       {showModal && (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl max-h-3xl px-4">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl lg:max-w-5xl px-10">
               <div className="border-0 rounded-custom shadow-lg w-full bg-white-bone grid grid-cols-1 md:grid-cols-2 md:gap-4 overflow-hidden">
                 <div
                   className="h-[400px] md:h-[500px] bg-no-repeat bg-cover bg-center"
@@ -38,12 +39,16 @@ export default function Modal({ showModal, setShowModal, item }) {
                       blanditiis molestias vitae, doloremque commodi voluptatem
                       nulla tempora?
                     </p>
+                    <Link to={`/detail/${item.id}`}>
+                      <button className="rounded-custom border-[1.5px] hover:border-none border-dark-font px-4 py-1 hover:bg-light-font hover:text-white-bone transition-all duration-300 float-right">
+                        More Details
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
           <div className=" fixed inset-0 z-40 bg-black/75"></div>
         </>
       )}
